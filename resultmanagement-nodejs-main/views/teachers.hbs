@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-6"><h1>Results</h1></div>
+   <div class="col-6 d-flex justify-content-end">
+     <a href="/adduser" type="button" class="btn btn-info align-self-center">Add New </a>
+   <a href="/" type="button" class="btn btn-danger align-self-center m-2"> Logout </a>
+   </div>
+</div>
+
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">RollNumber</th>
+      <th scope="col">Name</th>
+      <th scope="col">Date Of Birth</th>
+      <th scope="col">Score</th>
+      <th scope="col" class="text-end">options</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each rows}}
+    <tr>
+      <th scope="row">{{this.Rollnumber}}</th>
+      <td>{{this.Name}}</td>
+      <td>{{moment this.DateOfBirth format="DD-MM-YYYY"}}</td>
+      <td>{{this.Score}}</td>
+      <td class="text-end">
+        <a href="/edituser/{{this.Rollnumber}}" type="button" class="btn btn-light btn-small"><i class="bi bi-pencil"></i> Edit</a>
+        <a href="{{this.Rollnumber}}" type="button" class="btn btn-light btn-small"><i class="bi bi-person-x"></i> Delete</a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+
+
+

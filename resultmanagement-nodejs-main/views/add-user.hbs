@@ -1,0 +1,14 @@
+<div class="p-3">
+<div class="p-2"><h2>Enter Student Details: </h2></div>
+{{#if alert}}
+<div class="alert alert-success alert-dismissable fade show" role="alert">
+{{alert}}
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+</div>
+{{/if}}
+
+
+<form class="row g-3 needs-validation" method="POST" action="/adduser" novalidation >
+{{> user-form}}
+</form>
+</div>

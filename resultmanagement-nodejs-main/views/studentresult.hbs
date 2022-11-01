@@ -1,0 +1,25 @@
+<div class="d-flex justify-content-center p-5">
+    <h2>Your Result</h2>
+</div>
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Roll Number</th>
+      <th scope="col">Name</th>
+      <th scope="col">Date Of Birth</th>
+      <th scope="col">Score</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#each rows}}
+    <tr>
+      <th scope="row">{{this.Rollnumber}}</th>
+      <td>{{this.Name}}</td>
+      <td>{{moment this.DateOfBirth format="DD-MM-YYYY"}}</td>
+      <td>{{this.Score}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
